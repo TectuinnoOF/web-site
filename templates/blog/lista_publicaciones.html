@@ -46,8 +46,14 @@
                             </span>
                         </div>
 
+                        <!-- Contenido de la publicación -->
+                        <div class="mb-6 text-gray-800 leading-relaxed space-y-4">
+                            {{ publicacion.contenido|safe }}
+                        </div>
+
+                        <!-- Botón -->
                         <div class="flex items-center justify-between">
-                            <a href="{% url 'detalle_publicacion' publicacion.slug %}" 
+                            <a href="{% url 'detalle_publicacion' publicacion.slug %}"
                                class="inline-flex items-center space-x-2 px-6 py-3 rounded-xl font-medium transition-all duration-300 hover:transform hover:scale-105"
                                style="background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary)); color: white;">
                                 <span>Leer más</span>
@@ -66,6 +72,7 @@
             </div>
             {% endfor %}
         </div>
+
         <!-- Boton de inicio -->
         <div class="text-center mt-16 fade-in-up">
             <a href="/" class="inline-flex items-center space-x-3 px-8 py-4 rounded-2xl font-medium transition-all duration-300 hover:transform hover:scale-105"
