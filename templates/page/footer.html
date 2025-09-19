@@ -1,0 +1,107 @@
+{% load static %}
+<footer class="py-24 pb-12 border-t mt-24" style="border-color: var(--border-primary); background: var(--bg-secondary);" id="contacto">
+    <div class="max-w-7xl mx-auto px-5">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 lg:gap-20 mb-16">
+            <div class="footer-brand max-w-sm fade-in-up">
+                <img src="{% static 'img/logo3.png' %}" alt="Tectuinno" class="h-10 mb-8" />
+                <p class="text-secondary leading-relaxed mb-10 font-normal">
+                    Innovación tecnológica mexicana en microcontroladores RISC-V. 
+                    Desarrollamos soluciones personalizadas para impulsar la autonomía tecnológica nacional.
+                </p>
+                <div class="social-links flex gap-5">
+                    <a href="#" class="social-link w-11 h-11 bg-card border border-primary rounded-xl flex items-center justify-center no-underline transition-all duration-500 hover:bg-card-hover hover:border-hover hover:translate-y-[-3px] text-lg">
+                        📧
+                    </a>
+                    <a href="#" class="social-link w-11 h-11 bg-card border border-primary rounded-xl flex items-center justify-center no-underline transition-all duration-500 hover:bg-card-hover hover:border-hover hover:translate-y-[-3px] text-lg">
+                        🐦
+                    </a>
+                    <a href="#" class="social-link w-11 h-11 bg-card border border-primary rounded-xl flex items-center justify-center no-underline transition-all duration-500 hover:bg-card-hover hover:border-hover hover:translate-y-[-3px] text-lg">
+                        📘
+                    </a>
+                    <a href="#" class="social-link w-11 h-11 bg-card border border-primary rounded-xl flex items-center justify-center no-underline transition-all duration-500 hover:bg-card-hover hover:border-hover hover:translate-y-[-3px] text-lg">
+                        💼
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-section fade-in-up" style="animation-delay: 0.1s;">
+                <h4 class="font-medium mb-8 text-primary text-lg">Productos</h4>
+                <ul class="space-y-4 list-none">
+                    <li>
+                        <a href="#" class="text-muted no-underline transition-all duration-300 font-light hover:text-gold hover:translate-x-1">
+                            Herramientas
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-muted no-underline transition-all duration-300 font-light hover:text-gold hover:translate-x-1">
+                            Documentación
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="footer-section fade-in-up" style="animation-delay: 0.2s;">
+                <h4 class="font-medium mb-8 text-primary text-lg">Servicios</h4>
+                <ul class="space-y-4 list-none">
+                    <li>
+                        <a href="#" class="text-muted no-underline transition-all duration-300 font-light hover:text-gold hover:translate-x-1">
+                            Capacitación
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-muted no-underline transition-all duration-300 font-light hover:text-gold hover:translate-x-1">
+                            Soporte Técnico
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="footer-section fade-in-up" style="animation-delay: 0.3s;">
+                <h4 class="font-medium mb-8 text-primary text-lg">Comunidad</h4>
+                <ul class="space-y-4 list-none">
+                    <li>
+                        <a href="https://tectuinno.org/foro/" class="text-muted no-underline transition-all duration-300 font-light hover:text-gold hover:translate-x-1">
+                            Foro
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'lista_publicaciones' %}" class="text-muted no-underline transition-all duration-300 font-light hover:text-gold hover:translate-x-1">
+                            Blog
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom border-t pt-10 text-center" style="border-color: var(--border-primary);">
+            <p class="text-muted font-light">
+                &copy; 2025 Tectuinno. Todos los derechos reservados. Hecho con ❤️ en Tuxtla.
+            </p>
+        </div>
+    </div>
+</footer>
+
+<style>
+.social-link {
+    color: var(--text-primary);
+}
+
+.social-link:hover {
+    color: var(--text-primary);
+}
+
+@media (max-width: 768px) {
+    .footer-brand {
+        max-width: 100%;
+        text-align: center;
+    }
+    
+    .footer-section {
+        text-align: center;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+}
+</style>

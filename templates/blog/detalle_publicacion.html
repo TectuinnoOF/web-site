@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalle de la publicación</title>
+</head>
+<body>
+    <h1>{{ publicacion.titulo }}</h1>
+    <p><small>por {{ publicacion.autor }} el {{ publicacion.publicado_en|date:"d M Y H:i" }}</small></p>
+    <div>{{ publicacion.contenido|safe }}</div>
+</body>
+</html>

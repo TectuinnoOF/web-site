@@ -1,0 +1,251 @@
+{% load static %}
+<section class="py-32" style="background: var(--bg-secondary);" id="logros">
+    <div class="max-w-7xl mx-auto px-5">
+        <div class="text-center mb-24 fade-in-up">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-semibold mb-8 text-primary tracking-tight">
+                Nuestros Logros
+            </h2>
+            <p class="text-lg md:text-xl text-secondary max-w-2xl mx-auto font-normal leading-relaxed">
+                Formando la próxima generación de ingenieros con tecnología RISC-V
+            </p>
+        </div>
+        
+        <div class="carousel-container relative overflow-hidden rounded-3xl">
+            <div class="carousel-wrapper flex transition-transform duration-500 ease-in-out" id="carouselWrapper">
+                <div class="carousel-slide min-w-full flex flex-col md:flex-row gap-10 px-5">
+                    <div class="achievement-card flex-1 bg-card backdrop-blur-xl border border-primary rounded-3xl overflow-hidden transition-all duration-500 relative hover:translate-y-[-10px] hover:bg-card-hover hover:border-hover hover:shadow-2xl"
+                         style="box-shadow: 0 25px 50px var(--particle-1);">
+                        
+                        <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent to-transparent transform -translate-x-full transition-transform duration-700 achievement-border"></div>
+                        
+                        <div class="achievement-image relative h-72 overflow-hidden">
+                            <img src="{% static 'img/grupo2.jpeg' %}"
+                                 alt="InnovaTEC 2025" 
+                                 class="w-full h-full object-cover transition-all duration-500" />
+                            <div class="achievement-overlay absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-8">
+                                <div class="achievement-badge absolute top-5 right-5 px-4 py-2 rounded-2xl text-xs font-medium text-white"
+                                     style="background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);">
+                                    Educación
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="achievement-content p-10">
+                            <h3 class="achievement-title text-xl md:text-2xl font-semibold mb-4 text-primary">
+                                InnovaTEC 2025
+                            </h3>
+                            <p class="achievement-description text-secondary leading-relaxed font-normal">
+                                Alianza estratégica con el Tecnológico Nacional de México para formar estudiantes en tecnologías RISC-V y sistemas embebidos.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="achievement-card flex-1 bg-card backdrop-blur-xl border border-primary rounded-3xl overflow-hidden transition-all duration-500 relative hover:translate-y-[-10px] hover:bg-card-hover hover:border-hover hover:shadow-2xl"
+                         style="box-shadow: 0 25px 50px var(--particle-1);">
+                        
+                        <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent to-transparent transform -translate-x-full transition-transform duration-700 achievement-border"></div>
+                        
+                        <div class="achievement-image relative h-72 overflow-hidden">
+                            <img src="{% static 'img/gr.jpeg' %}"
+                                 alt="Prácticas Estudiantiles" 
+                                 class="w-full h-full object-cover transition-all duration-500" />
+                            <div class="achievement-overlay absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-8">
+                                <div class="achievement-badge absolute top-5 right-5 px-4 py-2 rounded-2xl text-xs font-medium text-white"
+                                     style="background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);">
+                                    Formación
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="achievement-content p-10">
+                            <h3 class="achievement-title text-xl md:text-2xl font-semibold mb-4 text-primary">
+                                Prácticas Estudiantiles
+                            </h3>
+                            <p class="achievement-description text-secondary leading-relaxed font-normal">
+                                Estudiantes desarrollando proyectos reales con microcontroladores Tectuinno en ferias tecnológicas y exposiciones.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="carousel-slide min-w-full flex flex-col md:flex-row gap-10 px-5">
+                    <div class="achievement-card flex-1 bg-card backdrop-blur-xl border border-primary rounded-3xl overflow-hidden transition-all duration-500 relative hover:translate-y-[-10px] hover:bg-card-hover hover:border-hover hover:shadow-2xl"
+                         style="box-shadow: 0 25px 50px var(--particle-1);">
+                        
+                        <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent to-transparent transform -translate-x-full transition-transform duration-700 achievement-border"></div>
+                        
+                        <div class="achievement-image relative h-72 overflow-hidden">
+                            <img src="{% static 'img/micro.jpeg' %}"
+                                 alt="Laboratorios de Innovación" 
+                                 class="w-full h-full object-cover transition-all duration-500" />
+                            <div class="achievement-overlay absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-8">
+                                <div class="achievement-badge absolute top-5 right-5 px-4 py-2 rounded-2xl text-xs font-medium text-white"
+                                     style="background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);">
+                                    Formación
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="achievement-content p-10">
+                            <h3 class="achievement-title text-xl md:text-2xl font-semibold mb-4 text-primary">
+                                Laboratorios de Innovación
+                            </h3>
+                            <p class="achievement-description text-secondary leading-relaxed font-normal">
+                                Estudiantes trabajando con equipos Tectuinno en laboratorios especializados, desarrollando prototipos y soluciones innovadoras.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="achievement-card flex-1 bg-card backdrop-blur-xl border border-primary rounded-3xl overflow-hidden transition-all duration-500 relative hover:translate-y-[-10px] hover:bg-card-hover hover:border-hover hover:shadow-2xl"
+                         style="box-shadow: 0 25px 50px var(--particle-1);">
+                        
+                        <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent to-transparent transform -translate-x-full transition-transform duration-700 achievement-border"></div>
+                        
+                        <div class="achievement-image relative h-72 overflow-hidden">
+                            <img src="{% static 'img/aja.jpeg' %}"
+                                 alt="Proyectos Avanzados"
+                                 class="w-full h-full object-cover transition-all duration-500" />
+                            <div class="achievement-overlay absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-8">
+                                <div class="achievement-badge absolute top-5 right-5 px-4 py-2 rounded-2xl text-xs font-medium text-white"
+                                     style="background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);">
+                                    Desarrollo
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="achievement-content p-10">
+                            <h3 class="achievement-title text-xl md:text-2xl font-semibold mb-4 text-primary">
+                                Proyectos Avanzados
+                            </h3>
+                            <p class="achievement-description text-secondary leading-relaxed font-normal">
+                                Desarrollo de proyectos complejos con matrices LED, sistemas embebidos y programación de microcontroladores RISC-V.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="carousel-slide min-w-full flex flex-col md:flex-row gap-10 px-5">
+                    <div class="achievement-card flex-1 bg-card backdrop-blur-xl border border-primary rounded-3xl overflow-hidden transition-all duration-500 relative hover:translate-y-[-10px] hover:bg-card-hover hover:border-hover hover:shadow-2xl"
+                         style="box-shadow: 0 25px 50px var(--particle-1);">
+                        
+                        <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent to-transparent transform -translate-x-full transition-transform duration-700 achievement-border"></div>
+                        
+                        <div class="achievement-image relative h-72 overflow-hidden">
+                            <img src="{% static 'img/Tectuino_Pauta.jpg' %}"
+                                 alt="Feria Estatal Pauta Chiapas 2025" 
+                                 class="w-full h-full object-cover transition-all duration-500" />
+                            <div class="achievement-overlay absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-8">
+                                <div class="achievement-badge absolute top-5 right-5 px-4 py-2 rounded-2xl text-xs font-medium text-white"
+                                     style="background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);">
+                                    Educación
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="achievement-content p-10">
+                            <h3 class="achievement-title text-xl md:text-2xl font-semibold mb-4 text-primary">
+                                Feria Estatal Pauta Chiapas 2025
+                            </h3>
+                            <p class="achievement-description text-secondary leading-relaxed font-normal">
+                                Tectuinno en la Feria Estatal Pauta Chiapas 2025: conectando la innovación tecnológica con el talento chiapaneco.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="carousel-controls flex justify-center items-center gap-5 mt-10">
+                <button class="carousel-btn bg-card border border-primary rounded-full w-12 h-12 flex items-center justify-center cursor-pointer transition-all duration-300 text-primary text-lg hover:bg-card-hover hover:border-hover hover:scale-110 disabled:opacity-50 disabled:cursor-not-allowed"
+                        onclick="prevSlide()" id="prevBtn">
+                    ←
+                </button>
+                
+                <div class="carousel-indicators flex gap-3">
+                    <div class="carousel-indicator w-3 h-3 rounded-full cursor-pointer transition-all duration-300 active" 
+                         style="background: var(--accent-primary);" onclick="goToSlide(0)"></div>
+                    <div class="carousel-indicator w-3 h-3 rounded-full cursor-pointer transition-all duration-300" 
+                         style="background: var(--border-primary);" onclick="goToSlide(1)"></div>
+                    <div class="carousel-indicator w-3 h-3 rounded-full cursor-pointer transition-all duration-300" 
+                         style="background: var(--border-primary);" onclick="goToSlide(2)"></div>
+                </div>
+                
+                <button class="carousel-btn bg-card border border-primary rounded-full w-12 h-12 flex items-center justify-center cursor-pointer transition-all duration-300 text-primary text-lg hover:bg-card-hover hover:border-hover hover:scale-110 disabled:opacity-50 disabled:cursor-not-allowed"
+                        onclick="nextSlide()" id="nextBtn">
+                    →
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.achievement-card:hover .achievement-border {
+    transform: translateX(100%);
+}
+
+.achievement-card:hover .achievement-image img {
+    transform: scale(1.05);
+}
+
+.carousel-indicator.active {
+    transform: scale(1.2);
+}
+</style>
+
+<script>
+let currentSlide = 0;
+const totalSlides = 3;
+
+function updateCarousel() {
+    const wrapper = document.getElementById('carouselWrapper');
+    const indicators = document.querySelectorAll('.carousel-indicator');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    
+    wrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
+    
+    indicators.forEach((indicator, index) => {
+        if (index === currentSlide) {
+            indicator.classList.add('active');
+            indicator.style.background = 'var(--accent-primary)';
+        } else {
+            indicator.classList.remove('active');
+            indicator.style.background = 'var(--border-primary)';
+        }
+    });
+    
+    prevBtn.disabled = currentSlide === 0;
+    nextBtn.disabled = currentSlide === totalSlides - 1;
+}
+
+function nextSlide() {
+    if (currentSlide < totalSlides - 1) {
+        currentSlide++;
+        updateCarousel();
+    }
+}
+
+function prevSlide() {
+    if (currentSlide > 0) {
+        currentSlide--;
+        updateCarousel();
+    }
+}
+
+function goToSlide(index) {
+    currentSlide = index;
+    updateCarousel();
+}
+
+setInterval(() => {
+    if (currentSlide < totalSlides - 1) {
+        nextSlide();
+    } else {
+        currentSlide = 0;
+        updateCarousel();
+    }
+}, 5000);
+
+// Initialize
+document.addEventListener('DOMContentLoaded', updateCarousel);
+</script>
