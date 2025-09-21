@@ -7,3 +7,9 @@ def index(request):
         'publicaciones': publicaciones
     }
     return render(request, 'page/index.html', context)
+
+def ide_page(request):
+    return render(request, 'ide/ide.html')
+
+def register_clients(request):
+    return render(request, 'ide/register_clients.html')
