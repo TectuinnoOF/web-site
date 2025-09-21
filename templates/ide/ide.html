@@ -1,10 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
 
-</body>
-</html>
+{% extends 'page/base.html' %}
+{% load static %}
+{% block title %}IDE Tectuinno - Entorno de Desarrollo Integrado{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="{% static 'css/ide.css' %}">
+{% endblock %}
+
+{% block content %}
+    {% include "ide/_hero.html" %}
+    {% include "ide/_features.html" %}
+    {% include "ide/_hardware.html" %}
+    {% include "ide/_download.html" %}
+    {% include "ide/_modal.html" %}
+{% endblock %}

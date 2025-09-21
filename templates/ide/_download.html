@@ -1,10 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<section class="py-32 px-4 relative" id="descargar">
+    <div class="max-w-4xl mx-auto">
+        <div class="download-card fade-in-up">
+            <h3 class="text-4xl font-bold mb-5 text-primary">¿Listo para comenzar?</h3>
+            <p class="text-xl text-secondary mb-10 max-w-2xl mx-auto leading-relaxed">
+                Descarga el IDE Tectuinno y comienza a desarrollar tus proyectos hoy mismo. Incluye documentación completa y ejemplos prácticos.
+            </p>
+            <button class="download-btn" onclick="showDownloadModal()">
+                <i class="fa-solid fa-download"></i>
+                Descargar IDE Tectuinno
+            </button>
+        </div>
+    </div>
+</section>
 
-</body>
-</html>
+{% block extra_js %}
+<script>
+  function showDownloadModal() {
+    document.getElementById("downloadModal").classList.add("active");
+  }
+  function closeModal() {
+    document.getElementById("downloadModal").classList.remove("active");
+  }
+  
+  window.addEventListener("click", function (e) {
+      const modal = document.getElementById("downloadModal");
+      if (e.target === modal) {
+        modal.classList.remove("active");
+      }
+    });
+</script>
+{% endblock %}

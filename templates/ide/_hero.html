@@ -1,10 +1,66 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+<section class="min-h-screen flex items-center mt-20 py-8 md:py-16 lg:py-32 px-4 relative">
+    <div class="max-w-7xl mx-auto w-full">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
+            <!-- Texto del hero -->
+            <div class="hero-text fade-in-left order-2 lg:order-1">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 md:mb-8 text-primary">
+                    IDE <span class="text-gold">Tectuinno</span><br class="hidden sm:block">
+                    Desarrollo Avanzado
+                </h1>
+                <p class="text-lg md:text-xl text-secondary mb-8 md:mb-12 max-w-lg leading-relaxed">
+                    El entorno de desarrollo integrado más avanzado para programación de microcontroladores RISC-V. Diseña, programa y simula tus proyectos con herramientas profesionales.
+                </p>
+            </div>
+            
+            <!-- Display del IDE -->
+            <div class="ide-display fade-in-right order-1 lg:order-2">
+                <div class="ide-recreated mx-auto max-w-md md:max-w-lg lg:max-w-none">
+                    <!-- Barra de título -->
+                    <div class="ide-header-bar flex items-center p-2 md:p-3">
+                        <div class="flex space-x-1 md:space-x-2 mr-2 md:mr-3">
+                            <div class="dot w-2 h-2 md:w-3 md:h-3 rounded-full"></div>
+                            <div class="dot w-2 h-2 md:w-3 md:h-3 rounded-full"></div>
+                            <div class="dot w-2 h-2 md:w-3 md:h-3 rounded-full"></div>
+                        </div>
+                        <div class="title text-xs md:text-sm lg:text-base">Tectuinno IDE</div>
+                    </div>
+                    
+                    <!-- Barra de menú -->
+                    <div class="ide-menu-bar flex flex-wrap p-1 md:p-2 text-xs md:text-sm">
+                        <span class="item px-2 py-1"><a href="#">Archivo</a></span>
+                        <span class="item px-2 py-1"><a href="#">Verificar</a></span>
+                        <span class="item px-2 py-1"><a href="#">Convertir</a></span>
+                        <span class="item px-2 py-1"><a href="#">Enviar</a></span>
+                    </div>
+                    
+                    <!-- Barra de herramientas -->
+                    <div class="ide-toolbar flex flex-wrap items-center p-2 gap-1 md:gap-2 text-xs md:text-sm">
+                        <button class="px-2 py-1 md:px-3 md:py-1.5">Verificar</button>
+                        <button class="px-2 py-1 md:px-3 md:py-1.5">Convertir</button>
+                        <button class="px-2 py-1 md:px-3 md:py-1.5">Enviar</button>
+                        <select class="px-2 py-1 md:px-3 md:py-1.5">
+                            <option>Escanear</option>
+                        </select>
+                        <input type="text" placeholder="" class="flex-grow bg-transparent border border-primary rounded px-2 py-1 md:px-3 md:py-1.5 text-primary">
+                    </div>
+                    
+                    <!-- Contenido principal -->
+                    <div class="ide-main-content flex flex-col md:flex-row h-48 md:h-64 lg:h-80">
+                        <div class="ide-editor-panel flex-1"></div>
+                        <div class="ide-output-panel flex-1 flex flex-col">
+                            <div class="ide-output-header flex flex-wrap text-xs md:text-sm">
+                                <span class="ide-output-tab active px-2 py-1 md:px-3 md:py-2">1.- Tokens</span>
+                                <span class="ide-output-tab px-2 py-1 md:px-3 md:py-2">2.- Resultado</span>
+                                <span class="ide-output-tab px-2 py-1 md:px-3 md:py-2">3.- Disassembly</span>
+                                <span class="ide-output-tab px-2 py-1 md:px-3 md:py-2">4.- Trama</span>
+                            </div>
+                            <div class="ide-output-text flex-1 p-2 text-xs md:text-sm overflow-auto">
+                                &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt; Lista de tokens &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

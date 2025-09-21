@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+<div class="modal" id="downloadModal">
+    <div class="modal-content">
+        <h3 class="text-2xl font-bold mb-5 text-primary">Registro requerido</h3>
+        <p class="text-secondary mb-5">Para descargar el IDE Tectuinno, necesitas registrarte. Es gratis y solo toma unos minutos. Obtén acceso completo a todas las herramientas y documentación.</p>
+        <a href="{% url 'register_clients' %}" class="btn btn-primary">Descargar ahora</a>
+        <button class="btn btn-secondary" onclick="closeModal()">Cancelar</button>
+    </div>
+</div>
