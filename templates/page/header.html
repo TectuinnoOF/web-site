@@ -2,29 +2,36 @@
 <nav class="fixed top-0 left-0 w-full z-50 py-5 backdrop-blur-xl border-b transition-all duration-300" 
      style="background: var(--navbar-bg); border-color: var(--navbar-border);">
     <div class="max-w-7xl mx-auto px-5 flex justify-between items-center">
+        <!-- Logo más grande -->
         <div class="logo-container">
-            <img src="{% static 'img/logo3.png' %}" alt="Tectuinno" 
-                 class="h-10 transition-all duration-300 hover:scale-105" />
+            <a href="/">
+                <img src="{% static 'img/logo3.png' %}" alt="Tectuinno"
+                     class="h-14 sm:h-16 transition-all duration-300 hover:scale-105" />
+            </a>
         </div>
-        
-        <ul class="nav-menu hidden md:flex gap-10 items-center list-none">
-            <li><a href="#inicio" class="text-secondary hover:text-primary transition-colors duration-300 px-4 py-2 rounded-lg text-sm">Inicio</a></li>
-            <li><a href="#nosotros" class="text-secondary hover:text-primary transition-colors duration-300 px-4 py-2 rounded-lg text-sm">Nosotros</a></li>
+
+        <!-- Menú Desktop -->
+        <ul class="nav-menu-desktop hidden md:flex gap-10 items-center list-none">
+            <li><a href="/#inicio" class="text-secondary hover:text-primary transition-colors duration-300 px-4 py-2 rounded-lg text-sm">Inicio</a></li>
+            <li><a href="/#nosotros" class="text-secondary hover:text-primary transition-colors duration-300 px-4 py-2 rounded-lg text-sm">Nosotros</a></li>
             <li><a href="https://tectuinno.org/foro/" class="text-secondary hover:text-primary transition-colors duration-300 px-4 py-2 rounded-lg text-sm">Foro</a></li>
             <li><a href="{% url 'lista_publicaciones' %}" class="text-secondary hover:text-primary transition-colors duration-300 px-4 py-2 rounded-lg text-sm">Blog</a></li>
-            <li><a href="#equipo" class="text-secondary hover:text-primary transition-colors duration-300 px-4 py-2 rounded-lg text-sm">Equipo</a></li>
-            <li><a href="#servicios" class="text-secondary hover:text-primary transition-colors duration-300 px-4 py-2 rounded-lg text-sm">Servicios</a></li>
-            <li><a href="#logros" class="text-secondary hover:text-primary transition-colors duration-300 px-4 py-2 rounded-lg text-sm">Logros</a></li>
-            <li><a href="#contacto" class="text-secondary hover:text-primary transition-colors duration-300 px-4 py-2 rounded-lg text-sm">Contacto</a></li>
+            <li><a href="/#equipo" class="text-secondary hover:text-primary transition-colors duration-300 px-4 py-2 rounded-lg text-sm">Equipo</a></li>
+            <li><a href="/#servicios" class="text-secondary hover:text-primary transition-colors duration-300 px-4 py-2 rounded-lg text-sm">Servicios</a></li>
+            <li><a href="/#logros" class="text-secondary hover:text-primary transition-colors duration-300 px-4 py-2 rounded-lg text-sm">Logros</a></li>
+            <li><a href="/#contacto" class="text-secondary hover:text-primary transition-colors duration-300 px-4 py-2 rounded-lg text-sm">Contacto</a></li>
+            <li><a href="{% url 'ide' %}" class="text-secondary hover:text-primary transition-colors duration-300 px-4 py-2 rounded-lg text-sm">IDE Tectuinno</a></li>
         </ul>
 
+        <!-- Botones derecha -->
         <div class="flex items-center">
             <div class="bg-card border border-primary rounded-full px-3 py-2 cursor-pointer transition-all duration-300 hover:bg-card-hover hover:border-hover flex items-center gap-2 ml-5"
                  onclick="toggleTheme()">
                 <span class="theme-icon text-base transition-all duration-300">🌙</span>
                 <span class="theme-text text-xs font-normal">Claro</span>
             </div>
-            
+
+            <!-- Botón hamburguesa -->
             <button class="menu-toggle md:hidden flex flex-col ml-3 p-1 bg-none border-none cursor-pointer" onclick="toggleMenu()">
                 <span class="w-6 h-0.5 rounded-sm my-0.5 transition-all duration-300" style="background: var(--text-primary);"></span>
                 <span class="w-6 h-0.5 rounded-sm my-0.5 transition-all duration-300" style="background: var(--text-primary);"></span>
@@ -32,41 +39,35 @@
             </button>
         </div>
     </div>
-    
-    <ul class="nav-menu fixed top-20 left-[-100%] w-full h-[calc(100vh-5rem)] flex-col justify-start pt-12 gap-6 list-none transition-all duration-300 md:hidden"
+
+    <!-- Menú Mobile -->
+    <ul class="nav-menu-mobile fixed top-20 left-[-100%] w-full h-[calc(100vh-5rem)] flex-col justify-start pt-12 gap-6 list-none transition-all duration-300 md:hidden"
         style="background: var(--navbar-bg); backdrop-filter: blur(20px);">
-        <li><a href="#inicio" class="text-secondary hover:text-primary transition-colors duration-300 px-4 py-2 rounded-lg text-sm block text-center" onclick="closeMenu()">Inicio</a></li>
-        <li><a href="#nosotros" class="text-secondary hover:text-primary transition-colors duration-300 px-4 py-2 rounded-lg text-sm block text-center" onclick="closeMenu()">Nosotros</a></li>
+        <li><a href="/#inicio" class="text-secondary hover:text-primary transition-colors duration-300 px-4 py-2 rounded-lg text-sm block text-center" onclick="closeMenu()">Inicio</a></li>
+        <li><a href="/#nosotros" class="text-secondary hover:text-primary transition-colors duration-300 px-4 py-2 rounded-lg text-sm block text-center" onclick="closeMenu()">Nosotros</a></li>
         <li><a href="https://tectuinno.org/foro/" class="text-secondary hover:text-primary transition-colors duration-300 px-4 py-2 rounded-lg text-sm block text-center" onclick="closeMenu()">Foro</a></li>
-        <li><a href="#blog" class="text-secondary hover:text-primary transition-colors duration-300 px-4 py-2 rounded-lg text-sm block text-center" onclick="closeMenu()">Blog</a></li>
-        <li><a href="#equipo" class="text-secondary hover:text-primary transition-colors duration-300 px-4 py-2 rounded-lg text-sm block text-center" onclick="closeMenu()">Equipo</a></li>
-        <li><a href="#servicios" class="text-secondary hover:text-primary transition-colors duration-300 px-4 py-2 rounded-lg text-sm block text-center" onclick="closeMenu()">Servicios</a></li>
-        <li><a href="#logros" class="text-secondary hover:text-primary transition-colors duration-300 px-4 py-2 rounded-lg text-sm block text-center" onclick="closeMenu()">Logros</a></li>
-        <li><a href="#contacto" class="text-secondary hover:text-primary transition-colors duration-300 px-4 py-2 rounded-lg text-sm block text-center" onclick="closeMenu()">Contacto</a></li>
+        <li><a href="{% url 'lista_publicaciones' %}" class="text-secondary hover:text-primary transition-colors duration-300 px-4 py-2 rounded-lg text-sm block text-center" onclick="closeMenu()">Blog</a></li>
+        <li><a href="/#equipo" class="text-secondary hover:text-primary transition-colors duration-300 px-4 py-2 rounded-lg text-sm block text-center" onclick="closeMenu()">Equipo</a></li>
+        <li><a href="/#servicios" class="text-secondary hover:text-primary transition-colors duration-300 px-4 py-2 rounded-lg text-sm block text-center" onclick="closeMenu()">Servicios</a></li>
+        <li><a href="/#logros" class="text-secondary hover:text-primary transition-colors duration-300 px-4 py-2 rounded-lg text-sm block text-center" onclick="closeMenu()">Logros</a></li>
+        <li><a href="/#contacto" class="text-secondary hover:text-primary transition-colors duration-300 px-4 py-2 rounded-lg text-sm block text-center" onclick="closeMenu()">Contacto</a></li>
+        <li><a href="/ide" class="text-secondary hover:text-primary transition-colors duration-300 px-4 py-2 rounded-lg text-sm block text-center" onclick="closeMenu()">IDE Tectuinno</a></li>
     </ul>
 </nav>
 
 <style>
-.nav-menu.active {
-    left: 0;
-}
+/* Menú mobile */
+.nav-menu-mobile.active { left: 0; }
 
-.menu-toggle.active span:nth-child(1) {
-    transform: rotate(-45deg) translate(-5px, 6px);
-}
+/* Animación hamburguesa -> X */
+.menu-toggle.active span:nth-child(1) { transform: rotate(-45deg) translate(-5px, 6px); }
+.menu-toggle.active span:nth-child(2) { opacity: 0; }
+.menu-toggle.active span:nth-child(3) { transform: rotate(45deg) translate(-5px, -6px); }
 
-.menu-toggle.active span:nth-child(2) {
-    opacity: 0;
-}
-
-.menu-toggle.active span:nth-child(3) {
-    transform: rotate(45deg) translate(-5px, -6px);
-}
-
+/* Menú desktop siempre visible en pantallas grandes */
 @media (min-width: 768px) {
-    .nav-menu {
+    .nav-menu-desktop {
         position: static !important;
-        left: auto !important;
         width: auto !important;
         height: auto !important;
         flex-direction: row !important;
