@@ -1,188 +1,69 @@
 {% extends "page/base.html" %}
-
-{% block title %}Registro - Tectuinno{% endblock %}
+{% load static %}
 
 {% block content %}
-<div class="min-h-screen flex items-center justify-center py-12 px-4 mt-20 sm:px-6 lg:px-8">
-    <div class="max-w-md w-full space-y-8">
-        <div class="bg-card border border-primary rounded-2xl p-8 backdrop-blur-lg transition-all duration-300 hover:bg-card-hover hover:border-hover hover:shadow-2xl hover:-translate-y-1 fade-in-up">
-            <!-- Header -->
-            <div class="fade-in-up mb-8">
-                <h2 class="text-4xl font-extrabold text-center mb-4 bg-gradient-to-r from-blue-400 via-purple-500 to-yellow-500 bg-clip-text text-transparent">
-                    Únete a Tectuinno
-                </h2>
-                <p class="text-muted text-center">
-                    Forma parte de la revolución RISC-V en México
-                </p>
-            </div>
 
-            <form method="post" class="space-y-6">
+<div class="min-h-screen flex flex-col md:flex-row items-center justify-center px-4 py-10">
+
+    <!-- Formulario -->
+    <div class="w-full md:w-1/2 flex mt-20 justify-center">
+        <div class="w-full max-w-lg bg-card p-8 rounded-xl shadow-lg border border-primary">
+
+            <h2 class="text-3xl font-bold text-accent mb-3 text-center">Bienvenido</h2>
+            <p class="text-muted mb-6 text-center">Crea tu cuenta para acceder a nuestros servicios.</p>
+
+            <form method="POST" class="space-y-4">
                 {% csrf_token %}
-                
+
                 <!-- Nombre -->
-                <div class="fade-in-up group">
-                    <label for="id_nombre" class="block text-secondary font-medium mb-2 transition-colors duration-300 group-hover:text-accent">
-                        Nombre <span class="text-red-500 ml-1">*</span>
-                    </label>
-                    <div class="relative">
-                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                            <span class="text-muted group-hover:text-accent transition-colors duration-300">👤</span>
-                        </div>
-                        <input 
-                            type="text" 
-                            id="id_nombre" 
-                            name="nombre" 
-                            required 
-                            class="bg-card border border-primary w-full pl-10 pr-4 py-3 rounded-lg text-primary placeholder-muted focus:outline-none focus:border-accent focus:ring-2 focus:ring-blue-500/20 focus:bg-card-hover transition-all duration-300"
-                            placeholder="Tu nombre"
-                        >
-                    </div>
-                </div>
+                <input type="text" name="username" value="{{ form.username.value }}"
+                    placeholder="Tu nombre"
+                    class="w-full bg-card border border-primary p-3 rounded-lg">
 
                 <!-- Apellido -->
-                <div class="fade-in-up group">
-                    <label for="id_apellido" class="block text-secondary font-medium mb-2 transition-colors duration-300 group-hover:text-accent">
-                        Apellido <span class="text-red-500 ml-1">*</span>
-                    </label>
-                    <div class="relative">
-                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                            <span class="text-muted group-hover:text-accent transition-colors duration-300">👤</span>
-                        </div>
-                        <input 
-                            type="text" 
-                            id="id_apellido" 
-                            name="apellido" 
-                            required 
-                            class="bg-card border border-primary w-full pl-10 pr-4 py-3 rounded-lg text-primary placeholder-muted focus:outline-none focus:border-accent focus:ring-2 focus:ring-blue-500/20 focus:bg-card-hover transition-all duration-300"
-                            placeholder="Tu apellido"
-                        >
-                    </div>
-                </div>
+                <input type="text" name="last_name" value="{{ form.last_name.value }}"
+                    placeholder="Tu apellido"
+                    class="w-full bg-card border border-primary p-3 rounded-lg">
 
                 <!-- Correo -->
-                <div class="fade-in-up group">
-                    <label for="id_correo" class="block text-secondary font-medium mb-2 transition-colors duration-300 group-hover:text-accent">
-                        Correo Electrónico <span class="text-red-500 ml-1">*</span>
-                    </label>
-                    <div class="relative">
-                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                            <span class="text-muted group-hover:text-accent transition-colors duration-300">📧</span>
-                        </div>
-                        <input 
-                            type="email" 
-                            id="id_correo" 
-                            name="correo" 
-                            required 
-                            class="bg-card border border-primary w-full pl-10 pr-4 py-3 rounded-lg text-primary placeholder-muted focus:outline-none focus:border-accent focus:ring-2 focus:ring-blue-500/20 focus:bg-card-hover transition-all duration-300"
-                            placeholder="tu@email.com"
-                        >
-                    </div>
-                </div>
+                <input type="email" name="email" value="{{ form.email.value }}"
+                    placeholder="Tu correo"
+                    class="w-full bg-card border border-primary p-3 rounded-lg">
 
                 <!-- Ocupación -->
-                <div class="fade-in-up group">
-                    <label for="id_ocupacion" class="block text-secondary font-medium mb-2 transition-colors duration-300 group-hover:text-accent">
-                        Ocupación <span class="text-red-500 ml-1">*</span>
-                    </label>
-                    <div class="relative">
-                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none z-10">
-                            <span class="text-muted group-hover:text-accent transition-colors duration-300">💼</span>
-                        </div>
-                        <select 
-                            id="id_ocupacion" 
-                            name="ocupacion" 
-                            required 
-                            class="bg-card border border-primary w-full pl-10 pr-10 py-3 rounded-lg text-primary appearance-none focus:outline-none focus:border-accent focus:ring-2 focus:ring-blue-500/20 focus:bg-card-hover transition-all duration-300 cursor-pointer"
-                        >
-                            <option value="" class="bg-gray-800 text-white">Selecciona tu ocupación</option>
-                            <option value="estudiante" class="bg-gray-800 text-white">Estudiante</option>
-                            <option value="trabajador" class="bg-gray-800 text-white">Trabajador</option>
-                        </select>
-                        <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
-                            <svg class="w-5 h-5 text-muted group-hover:text-accent transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                            </svg>
-                        </div>
-                    </div>
-                </div>
+                <input type="text" name="ocupacion" value="{{ form.ocupacion.value }}"
+                    placeholder="¿A qué te dedicas?"
+                    class="w-full bg-card border border-primary p-3 rounded-lg">
 
-                <!-- Área de Interés -->
-                <div class="fade-in-up group">
-                    <label for="id_area_interes" class="block text-secondary font-medium mb-2 transition-colors duration-300 group-hover:text-accent">
-                        Área de Interés <span class="text-red-500 ml-1">*</span>
-                    </label>
-                    <div class="relative">
-                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none z-10">
-                            <span class="text-muted group-hover:text-accent transition-colors duration-300">🎯</span>
-                        </div>
-                        <select 
-                            id="id_area_interes" 
-                            name="area_interes" 
-                            required 
-                            class="bg-card border border-primary w-full pl-10 pr-10 py-3 rounded-lg text-primary appearance-none focus:outline-none focus:border-accent focus:ring-2 focus:ring-blue-500/20 focus:bg-card-hover transition-all duration-300 cursor-pointer"
-                        >
-                            <option value="" class="bg-gray-800 text-white">Selecciona tu área de interés</option>
-                            <option value="desarrollo_hardware" class="bg-gray-800 text-white">Desarrollo de Hardware</option>
-                            <option value="programacion" class="bg-gray-800 text-white">Programación</option>
-                            <option value="electronica" class="bg-gray-800 text-white">Electrónica</option>
-                            <option value="otro" class="bg-gray-800 text-white">Otro</option>
-                        </select>
-                        <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
-                            <svg class="w-5 h-5 text-muted group-hover:text-accent transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                            </svg>
-                        </div>
-                    </div>
-                </div>
+                <!-- Área de interés -->
+                <input type="text" name="area_interes" value="{{ form.area_interes.value }}"
+                    placeholder="¿Cuál es tu área de interés?"
+                    class="w-full bg-card border border-primary p-3 rounded-lg">
 
                 <!-- Contraseña -->
-                <div class="fade-in-up group">
-                    <label for="id_password" class="block text-secondary font-medium mb-2 transition-colors duration-300 group-hover:text-accent">
-                        Contraseña <span class="text-red-500 ml-1">*</span>
-                    </label>
-                    <div class="relative">
-                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                            <span class="text-muted group-hover:text-accent transition-colors duration-300">🔒</span>
-                        </div>
-                        <input 
-                            type="password" 
-                            id="id_password" 
-                            name="password" 
-                            required 
-                            minlength="8"
-                            class="bg-card border border-primary w-full pl-10 pr-4 py-3 rounded-lg text-primary placeholder-muted focus:outline-none focus:border-accent focus:ring-2 focus:ring-blue-500/20 focus:bg-card-hover transition-all duration-300"
-                            placeholder="Crea una contraseña segura"
-                        >
+                <input type="password" name="password1"
+                    placeholder="Contraseña"
+                    class="w-full bg-card border border-primary p-3 rounded-lg">
+
+                <!-- Confirmar contraseña -->
+                <input type="password" name="password2"
+                    placeholder="Confirmar contraseña"
+                    class="w-full bg-card border border-primary p-3 rounded-lg">
+
+                {% if form.errors %}
+                    <div class="text-red-500 text-sm text-left">
+                        {{ form.errors }}
                     </div>
-                </div>
+                {% endif %}
 
-                <!-- Divider -->
-                <div class="fade-in-up">
-                    <div class="h-px bg-gradient-to-r from-transparent via-gray-600 to-transparent my-8"></div>
-                </div>
-
-                <!-- Submit Button -->
-                <div class="fade-in-up">
-                    <button 
-                        type="submit" 
-                        class="w-full bg-gradient-to-r from-blue-500 via-purple-600 to-blue-700 hover:from-blue-600 hover:via-purple-700 hover:to-blue-800 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-500/50 relative overflow-hidden group"
-                    >
-                        <span class="relative z-10">Crear Cuenta</span>
-                        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
-                    </button>
-                </div>
-
-                <!-- Login Link -->
-                <div class="text-center fade-in-up">
-                    <p class="text-muted">
-                        ¿Ya tienes una cuenta? 
-                        <a href="#" class="text-accent hover:text-gold font-medium transition-colors duration-300 hover:underline">
-                            Inicia sesión aquí
-                        </a>
-                    </p>
-                </div>
+                <button type="submit"
+                    class="w-full bg-accent text-white py-3 rounded-lg hover:bg-accent-secondary transition">
+                    Registrarme
+                </button>
             </form>
+
         </div>
     </div>
 </div>
+
 {% endblock %}
