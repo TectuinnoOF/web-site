@@ -30,5 +30,6 @@ urlpatterns = [
     path('ide/', ide_page, name='ide'),
     path('register/', register_clients, name='register_clients'),
     path('blog/', include('blog.urls')),
+    path('videos/', include('videos.urls')),
     path('tinymce/', include('tinymce.urls')),
 ]

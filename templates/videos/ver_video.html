@@ -1,0 +1,39 @@
+{% extends "page/base.html" %}
+
+{% block title %}Video - {{ video.titulo }}{% endblock %}
+
+{% block content %}
+<div class="max-w-4xl mx-auto px-6 py-16 mt-20 fade-in-up">
+
+    <!-- TÍTULO -->
+    <h1 class="text-4xl font-bold mb-10 text-primary text-center">
+        {{ video.titulo }}
+    </h1>
+
+    {% if video_id %}
+    <!-- CARD DEL VIDEO -->
+    <div class="bg-card border border-primary rounded-2xl p-4 
+                shadow-lg transition-all duration-300 
+                hover:bg-card-hover hover:border-hover fade-in-up">
+
+        <!-- MINI REPRODUCTOR RESPONSIVO -->
+        <div class="w-full aspect-video rounded-xl overflow-hidden border border-primary">
+            <iframe
+                class="w-full h-full"
+                src="https://www.youtube.com/embed/{{ video_id }}"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+    {% else %}
+    <!-- ERROR SI LA URL ES INVÁLIDA -->
+    <p class="text-center text-red-400 font-semibold text-lg mt-6 fade-in-up">
+        URL no válida de YouTube.
+    </p>
+    {% endif %}
+
+</div>
+{% endblock %}

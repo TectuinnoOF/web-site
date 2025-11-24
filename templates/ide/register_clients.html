@@ -16,27 +16,27 @@
                 {% csrf_token %}
 
                 <!-- Nombre -->
-                <input type="text" name="username" value="{{ form.username.value }}"
+                <input type="text" name="username" value="{{ form.username.value|default_if_none:'' }}"
                     placeholder="Tu nombre"
                     class="w-full bg-card border border-primary p-3 rounded-lg">
 
                 <!-- Apellido -->
-                <input type="text" name="last_name" value="{{ form.last_name.value }}"
+                <input type="text" name="last_name" value="{{ form.last_name.value|default_if_none:''  }}"
                     placeholder="Tu apellido"
                     class="w-full bg-card border border-primary p-3 rounded-lg">
 
                 <!-- Correo -->
-                <input type="email" name="email" value="{{ form.email.value }}"
+                <input type="email" name="email" value="{{ form.email.value|default_if_none:''  }}"
                     placeholder="Tu correo"
                     class="w-full bg-card border border-primary p-3 rounded-lg">
 
                 <!-- Ocupación -->
-                <input type="text" name="ocupacion" value="{{ form.ocupacion.value }}"
+                <input type="text" name="ocupacion" value="{{ form.ocupacion.value|default_if_none:''  }}"
                     placeholder="¿A qué te dedicas?"
                     class="w-full bg-card border border-primary p-3 rounded-lg">
 
                 <!-- Área de interés -->
-                <input type="text" name="area_interes" value="{{ form.area_interes.value }}"
+                <input type="text" name="area_interes" value="{{ form.area_interes.value|default_if_none:''  }}"
                     placeholder="¿Cuál es tu área de interés?"
                     class="w-full bg-card border border-primary p-3 rounded-lg">
 
