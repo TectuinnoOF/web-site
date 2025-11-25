@@ -5,35 +5,50 @@
 {% block content %}
 <div class="max-w-4xl mx-auto px-6 py-16 mt-20 fade-in-up">
 
-    <!-- TÍTULO -->
+    <!-- Título del video -->
     <h1 class="text-4xl font-bold mb-10 text-primary text-center">
         {{ video.titulo }}
     </h1>
 
     {% if video_id %}
-    <!-- CARD DEL VIDEO -->
-    <div class="bg-card border border-primary rounded-2xl p-4 
-                shadow-lg transition-all duration-300 
-                hover:bg-card-hover hover:border-hover fade-in-up">
-
-        <!-- MINI REPRODUCTOR RESPONSIVO -->
-        <div class="w-full aspect-video rounded-xl overflow-hidden border border-primary">
-            <iframe
-                class="w-full h-full"
-                src="https://www.youtube.com/embed/{{ video_id }}"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-            </iframe>
-        </div>
+        <div class="bg-card border border-primary rounded-2xl p-4 
+                    shadow-lg transition-all duration-300 
+                    hover:bg-card-hover hover:border-hover fade-in-up">
+        
+            <div class="w-full aspect-video rounded-xl overflow-hidden border border-primary bg-black">
+                <iframe
+                    class="w-full h-full"
+                    src="https://www.youtube-nocookie.com/embed/{{ video_id }}?rel=0&enablejsapi=1&origin={{ request.scheme }}://{{ request.get_host }}"
+                    title="YouTube video player: {{ video.titulo }}"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                    referrerpolicy="strict-origin-when-cross-origin">
+                </iframe>
+            </div>
     </div>
 
     {% else %}
-    <!-- ERROR SI LA URL ES INVÁLIDA -->
-    <p class="text-center text-red-400 font-semibold text-lg mt-6 fade-in-up">
-        URL no válida de YouTube.
-    </p>
+    <!-- Error (URL invalida) -->
+    <div class="text-center p-6 bg-red-50 border border-red-200 rounded-lg">
+        <p class="text-red-600 font-semibold text-lg mb-2">
+            ❌ Error al cargar el video
+        </p>
+        <p class="text-red-500">
+            URL proporcionada: {{ video.url }}
+        </p>
+        <p class="text-red-500 text-sm mt-2">
+            Verifica que sea una URL válida de YouTube
+        </p>
+    </div>
     {% endif %}
+
+    <!-- Botón para volver -->
+    <div class="text-center mt-8">
+        <a href="{% url 'list_videos' %}" 
+           class="inline-block bg-primary text-white px-6 py-2 rounded-lg hover:bg-primary-dark transition-colors">
+            ← Volver a la lista de videos
+        </a>
+    </div>
 
 </div>
 {% endblock %}
